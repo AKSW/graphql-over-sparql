@@ -25,6 +25,9 @@ into Fuseki's extension directory. This should enable configuration of the Graph
 
 The relevant Apache Jena Fuseki config is as follows.
 ```turtle
+PREFIX ja:        <http://jena.hpl.hp.com/2005/11/Assembler#>
+PREFIX norse:     <https://w3id.org/aksw/norse#>
+
 <#service> rdf:type fuseki:Service ;
   fuseki:name "coypu" ;
   fuseki:endpoint [ fuseki:operation fuseki:query ] ;
