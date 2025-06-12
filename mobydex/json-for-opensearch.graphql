@@ -1,0 +1,29 @@
+{
+  Establishment(limit: 10) @array @debug
+    @pattern(of: "?s a :Establishment", from: "s", to: "s")
+    #                  @pattern(of: "?s a :Establishment FILTER(?s = <https://data.coypu.org/company/ptrt/01-10-51011008130>)", from: "s", to: "s")
+    @graph(iri: "https://data.coypu.org/companies/prtr/")
+    @prefix(name: "", iri: "https://schema.coypu.org/global#")
+    @prefix(name: "rdfs", iri: "http://www.w3.org/2000/01/rdf-schema#")
+    @prefix(name: "geo", iri: "http://www.opengis.net/ont/geosparql#")
+    @prefix(name: "geof", iri: "http://www.opengis.net/def/function/geosparql/")
+    @prefix(name: "norse", iri: "https://w3id.org/aksw/norse#")
+  {
+    command {
+      index {
+        _index @bind(of: "'mobydex_geo1'")
+        _id @one @pattern(of: "BIND(STR(?x) AS ?y)", from: "x", to: "y")
+      }
+    }
+    data {
+      iri @one @pattern(of: "BIND(?x AS ?y)", from: "x", to: "y")
+      label @one @rdf(iri: "rdfs:label") {
+        str @one @pattern(of: "BIND(STR(?x) AS ?y)", from: "x", to: "y")
+        lang @one @pattern(of: "BIND(LANG(?x) AS ?y)", from: "x", to: "y") # @expr(of: "lang(?x)")
+        #lang @one @bind(of: "LANG(?x)", as: "y", target:true)
+      }
+      location @one @pattern(of: "?s geo:hasGeometry/geo:asWKT ?x BIND(STRDT(STR(geof:asGeoJSON(?x)), norse:json) AS ?o)", from: "s", to: "o")
+    }
+  }
+}
+
