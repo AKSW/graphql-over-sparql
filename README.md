@@ -10,13 +10,13 @@ The source code is currently part of our [JenaX](https://github.com/Scaseco/jena
 
 The GraphQL module comprises the engine, a simple user interface and a plugin for the Jena Fuseki server.
 
-Link: https://github.com/Scaseco/jenax/tree/develop/jenax-graphql-parent/jenax-graphql-v2
+Link: https://github.com/Scaseco/jenax/tree/develop/jenax-graphql-parent/jenax-graphql-v2-parent
 
 ## Demos
 
 * GraphQL-over-SPARQL demo: https://smartdataanalytics.github.io/RdfProcessingToolkit/graphql/
 * Coypu endpoint (the one from the Screenshot): https://copper.coypu.org/#/dataset/coypu/info
-* [./odp-leipzig](Open Data Portal Leipzig)
+* [Open Data Portal Leipzig](/odp-leipzig)
 
 ## Fuseki Plugin
 
