@@ -1,0 +1,12 @@
+{
+  ClassToDatasets @pretty @debug {
+    class
+    dcatDatasetCount
+    dcatDatasets {
+      artifactId
+      groupId
+      version
+    }
+  }
+}
+
