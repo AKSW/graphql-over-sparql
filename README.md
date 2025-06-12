@@ -16,7 +16,7 @@ Link: https://github.com/Scaseco/jenax/tree/develop/jenax-graphql-parent/jenax-g
 
 * GraphQL-over-SPARQL demo: https://smartdataanalytics.github.io/RdfProcessingToolkit/graphql/
 * Coypu endpoint (the one from the Screenshot): https://copper.coypu.org/#/dataset/coypu/info
-* [./odp-leipzig](Open Data Portal Leipzig)
+* [Open Data Portal Leipzig](/odp-leipzig)
 
 ## Fuseki Plugin
 
