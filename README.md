@@ -63,7 +63,9 @@ rpt integrate --server catalog.ttl --graphql-schema schema.graphql
 * Start a server with SPARQL polyfill for LATERAL (will make many requests!)
 
 ```bash
-rpt integrate -e remote --loc http://your.sparql/endpoint --graphql-schema schema.graphql --polyfill-lateral
+rpt integrate -e remote --loc http://your.sparql/endpoint \
+  --graphql-schema schema.graphql \
+  --polyfill-lateral
 ```
 
 
