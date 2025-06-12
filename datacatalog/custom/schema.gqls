@@ -1,0 +1,59 @@
+type Query {
+  DcatDatasets: [DcatDataset]
+  ClassToDatasets: [ClassToDatasets]
+}
+
+type ClassToDatasets
+    @prefix(name: "void", iri: "http://rdfs.org/ns/void#")
+    @prefix(name: "dcat", iri: "http://www.w3.org/ns/dcat#")
+    @prefix(name: "owl", iri: "http://www.w3.org/2002/07/owl#")
+    @pattern(of: """
+      SELECT ?class (COUNT(DISTINCT ?dcatDataset) AS ?datasetCount) {
+        ?dcatDataset a dcat:Dataset ;
+        owl:sameAs ?voidDataset .
+        ?voidDataset void:classPartition ?cp .
+        ?cp void:class ?class .
+      }
+      GROUP BY ?class ORDER BY DESC(?datasetCount)
+    """, from: "class", to: "class")
+{
+  class: Scalar @bind(of: "?class")
+  dcatDatasetCount: Scalar @bind(of: "?datasetCount")
+  
+  dcatDatasets: [DcatDataset]
+    @prefix(name: "void", iri: "http://rdfs.org/ns/void#")
+    @prefix(name: "dcat", iri: "http://www.w3.org/ns/dcat#")
+    @prefix(name: "owl", iri: "http://www.w3.org/2002/07/owl#")
+    @pattern(of: """
+      SELECT ?class ?dcatDataset {
+        ?dcatDataset a dcat:Dataset ;
+        owl:sameAs ?voidDataset .
+        ?voidDataset void:classPartition ?cp .
+        ?cp void:class ?class .
+      }
+    """, from: "class", to: "dcatDataset")    
+}
+
+type DcatDataset @uri(value: "http://www.w3.org/ns/dcat#Dataset") {
+  uri: Scalar @to
+  identifier: Scalar @uri(value: "http://purl.org/dc/terms/identifier")
+  groupId: Scalar @uri(value: "http://www.example.org/groupId")
+  creator: Scalar @uri(value: "http://purl.org/dc/terms/creator")
+  issued: Scalar @uri(value: "http://purl.org/dc/terms/issued")
+  artifactId: Scalar @uri(value: "http://www.example.org/artifactId")
+  version: Scalar @uri(value: "http://dataid.dbpedia.org/ns/core#version")
+  type0: Scalar @uri(value: "https://schema.coypu.org/metadata-template#type")
+  label: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#label")
+  bbox: Scalar @uri(value: "http://www.w3.org/ns/dcat#bbox")
+  description: Scalar @uri(value: "http://purl.org/dc/terms/description")
+  comment: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#comment")
+  licenseNote: Scalar @uri(value: "https://schema.coypu.org/metadata-template#licenseNote")
+  theme: Scalar @uri(value: "https://schema.coypu.org/metadata-template#theme")
+}
+
+# Note: A variant of @pattern(of: "") that works with SPARQL prefix syntax needs to be added.
+#      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+#      PREFIX dcat: <http://www.w3.org/ns/dcat#>
+#      PREFIX void: <http://rdfs.org/ns/void#>
+
+

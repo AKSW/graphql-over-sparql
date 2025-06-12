@@ -1,0 +1,167 @@
+type Dataset @uri(value: "http://dataid.dbpedia.org/ns/core#Dataset") {
+  uri: Scalar @to
+  isDefinedBy: untyped @uri(value: "http://www.w3.org/2000/01/rdf-schema#isDefinedBy")
+  sameAs: Dataset1 @uri(value: "http://www.w3.org/2002/07/owl#sameAs")
+  identifier: Scalar @uri(value: "http://purl.org/dc/terms/identifier")
+  groupId: Scalar @uri(value: "http://www.example.org/groupId")
+  distribution: class0 @uri(value: "http://www.w3.org/ns/dcat#distribution")
+  creator: Scalar @uri(value: "http://purl.org/dc/terms/creator")
+  issued: Scalar @uri(value: "http://purl.org/dc/terms/issued")
+  artifactId: Scalar @uri(value: "http://www.example.org/artifactId")
+  group: untyped @uri(value: "http://dataid.dbpedia.org/ns/core#group")
+  version: Scalar @uri(value: "http://dataid.dbpedia.org/ns/core#version")
+  type: [untyped] @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  type0: Scalar @uri(value: "https://schema.coypu.org/metadata-template#type")
+  license: untyped @uri(value: "http://purl.org/dc/terms/license")
+  label: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#label")
+  bbox: Scalar @uri(value: "http://www.w3.org/ns/dcat#bbox")
+  licensePage: untyped @uri(value: "https://schema.coypu.org/metadata-template#licensePage")
+  description: Scalar @uri(value: "http://purl.org/dc/terms/description")
+  graph: [untyped] @uri(value: "https://schema.coypu.org/metadata-template#graph")
+  spatial: Location @uri(value: "http://purl.org/dc/terms/spatial")
+  distribution0: class0 @uri(value: "http://dataid.dbpedia.org/ns/core#distribution")
+  version0: Scalar @uri(value: "http://www.w3.org/ns/dcat#version")
+  comment: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#comment")
+  landingPage: untyped @uri(value: "http://www.w3.org/ns/dcat#landingPage")
+  contributor: untyped @uri(value: "http://www.w3.org/ns/dcat#contributor")
+  temporal: untyped @uri(value: "http://purl.org/dc/terms/temporal")
+  wasGeneratedBy: untyped @uri(value: "http://www.w3.org/ns/prov#wasGeneratedBy")
+  licenseNote: Scalar @uri(value: "https://schema.coypu.org/metadata-template#licenseNote")
+  theme: Scalar @uri(value: "https://schema.coypu.org/metadata-template#theme")
+}
+
+type Dataset0 @uri(value: "http://www.w3.org/ns/dcat#Dataset") {
+  uri: Scalar @to
+  isDefinedBy: untyped @uri(value: "http://www.w3.org/2000/01/rdf-schema#isDefinedBy")
+  sameAs: Dataset1 @uri(value: "http://www.w3.org/2002/07/owl#sameAs")
+  identifier: Scalar @uri(value: "http://purl.org/dc/terms/identifier")
+  groupId: Scalar @uri(value: "http://www.example.org/groupId")
+  distribution: class0 @uri(value: "http://www.w3.org/ns/dcat#distribution")
+  creator: Scalar @uri(value: "http://purl.org/dc/terms/creator")
+  issued: Scalar @uri(value: "http://purl.org/dc/terms/issued")
+  artifactId: Scalar @uri(value: "http://www.example.org/artifactId")
+  group: untyped @uri(value: "http://dataid.dbpedia.org/ns/core#group")
+  version: Scalar @uri(value: "http://dataid.dbpedia.org/ns/core#version")
+  type: [untyped] @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  type0: Scalar @uri(value: "https://schema.coypu.org/metadata-template#type")
+  license: untyped @uri(value: "http://purl.org/dc/terms/license")
+  label: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#label")
+  bbox: Scalar @uri(value: "http://www.w3.org/ns/dcat#bbox")
+  licensePage: untyped @uri(value: "https://schema.coypu.org/metadata-template#licensePage")
+  description: Scalar @uri(value: "http://purl.org/dc/terms/description")
+  graph: [untyped] @uri(value: "https://schema.coypu.org/metadata-template#graph")
+  spatial: Location @uri(value: "http://purl.org/dc/terms/spatial")
+  distribution0: class0 @uri(value: "http://dataid.dbpedia.org/ns/core#distribution")
+  version0: Scalar @uri(value: "http://www.w3.org/ns/dcat#version")
+  comment: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#comment")
+  landingPage: untyped @uri(value: "http://www.w3.org/ns/dcat#landingPage")
+  contributor: untyped @uri(value: "http://www.w3.org/ns/dcat#contributor")
+  temporal: untyped @uri(value: "http://purl.org/dc/terms/temporal")
+  wasGeneratedBy: untyped @uri(value: "http://www.w3.org/ns/prov#wasGeneratedBy")
+  licenseNote: Scalar @uri(value: "https://schema.coypu.org/metadata-template#licenseNote")
+  theme: Scalar @uri(value: "https://schema.coypu.org/metadata-template#theme")
+}
+
+type Distribution @uri(value: "http://www.w3.org/ns/dcat#Distribution") {
+  uri: Scalar @to
+  version0: Scalar @uri(value: "http://www.w3.org/ns/dcat#version")
+  downloadURL: untyped @uri(value: "http://www.w3.org/ns/dcat#downloadURL")
+  type1: Scalar @uri(value: "http://www.example.org/type")
+  artifactId: Scalar @uri(value: "http://www.example.org/artifactId")
+  version: Scalar @uri(value: "http://dataid.dbpedia.org/ns/core#version")
+  identifier: Scalar @uri(value: "http://purl.org/dc/terms/identifier")
+  groupId: Scalar @uri(value: "http://www.example.org/groupId")
+  type: [untyped] @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  downloadURL0: untyped @uri(value: "http://dataid.dbpedia.org/ns/core#downloadURL")
+}
+
+type MavenBuild @uri(value: "http://www.example.org/MavenBuild") {
+  uri: Scalar @to
+  type: untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  urn: untyped @uri(value: "http://www.example.org/urn")
+}
+
+type Dataset1 @uri(value: "http://rdfs.org/ns/void#Dataset") {
+  uri: Scalar @to
+  distinctIRIReferenceObjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctIRIReferenceObjects")
+  propertyPartition: [untyped] @uri(value: "http://rdfs.org/ns/void#propertyPartition")
+  distinctSubjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctSubjects")
+  distinctIRIReferenceSubjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctIRIReferenceSubjects")
+  distinctRDFNodes: Scalar @uri(value: "http://rdfs.org/ns/void#distinctRDFNodes")
+  distinctBlankNodes: Scalar @uri(value: "http://rdfs.org/ns/void#distinctBlankNodes")
+  classes: Scalar @uri(value: "http://rdfs.org/ns/void#classes")
+  distinctObjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctObjects")
+  classPartition: [untyped] @uri(value: "http://rdfs.org/ns/void#classPartition")
+  distinctBlankNodeSubjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctBlankNodeSubjects")
+  triples: Scalar @uri(value: "http://rdfs.org/ns/void#triples")
+  distinctIRIReferences: Scalar @uri(value: "http://rdfs.org/ns/void#distinctIRIReferences")
+  properties: Scalar @uri(value: "http://rdfs.org/ns/void#properties")
+  distinctLiterals: Scalar @uri(value: "http://rdfs.org/ns/void#distinctLiterals")
+  distinctBlankNodeObjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctBlankNodeObjects")
+  type: untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type untyped {
+  uri: Scalar @to
+  propertyPartition: [untyped] @uri(value: "http://rdfs.org/ns/void#propertyPartition")
+  subjectClass: untyped @uri(value: "http://rdfs.org/ns/void#subjectClass")
+  name: Scalar @uri(value: "http://xmlns.com/foaf/0.1/name")
+  distinctSubjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctSubjects")
+  website: untyped @uri(value: "http://www.example.org/website")
+  classes: Scalar @uri(value: "http://rdfs.org/ns/void#classes")
+  distinctObjects: Scalar @uri(value: "http://rdfs.org/ns/void#distinctObjects")
+  distinctMembers: Scalar @uri(value: "http://rdfs.org/ns/void#distinctMembers")
+  property: untyped @uri(value: "http://rdfs.org/ns/void#property")
+  memberOf: untyped @uri(value: "http://www.w3.org/ns/org#memberOf")
+  objectClass: untyped @uri(value: "http://rdfs.org/ns/void#objectClass")
+  subjectTypes: [untyped] @uri(value: "http://rdfs.org/ns/void#subjectTypes")
+  triples: Scalar @uri(value: "http://rdfs.org/ns/void#triples")
+  class: untyped @uri(value: "http://rdfs.org/ns/void#class")
+  properties: Scalar @uri(value: "http://rdfs.org/ns/void#properties")
+  hadPlan: MavenBuild @uri(value: "http://www.w3.org/ns/prov#hadPlan")
+  objectTypes: [untyped] @uri(value: "http://rdfs.org/ns/void#objectTypes")
+  label: Scalar @uri(value: "http://www.w3.org/2000/01/rdf-schema#label")
+}
+
+type Location @uri(value: "http://purl.org/dc/terms/Location") {
+  uri: Scalar @to
+  geometry: Scalar @uri(value: "http://www.w3.org/ns/locn#geometry")
+  type: untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type Distribution0 @uri(value: "http://dataid.dbpedia.org/ns/core#Distribution") {
+  uri: Scalar @to
+  version0: Scalar @uri(value: "http://www.w3.org/ns/dcat#version")
+  downloadURL: untyped @uri(value: "http://www.w3.org/ns/dcat#downloadURL")
+  type1: Scalar @uri(value: "http://www.example.org/type")
+  artifactId: Scalar @uri(value: "http://www.example.org/artifactId")
+  version: Scalar @uri(value: "http://dataid.dbpedia.org/ns/core#version")
+  identifier: Scalar @uri(value: "http://purl.org/dc/terms/identifier")
+  groupId: Scalar @uri(value: "http://www.example.org/groupId")
+  type: [untyped] @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  downloadURL0: untyped @uri(value: "http://dataid.dbpedia.org/ns/core#downloadURL")
+}
+
+type class0 {
+  uri: Scalar @to
+  version0: Scalar @uri(value: "http://www.w3.org/ns/dcat#version")
+  downloadURL: untyped @uri(value: "http://www.w3.org/ns/dcat#downloadURL")
+  type1: Scalar @uri(value: "http://www.example.org/type")
+  artifactId: Scalar @uri(value: "http://www.example.org/artifactId")
+  version: Scalar @uri(value: "http://dataid.dbpedia.org/ns/core#version")
+  identifier: Scalar @uri(value: "http://purl.org/dc/terms/identifier")
+  groupId: Scalar @uri(value: "http://www.example.org/groupId")
+  type: [untyped] @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  downloadURL0: untyped @uri(value: "http://dataid.dbpedia.org/ns/core#downloadURL")
+}
+
+type Query {
+  Dataset: [Dataset]
+  Dataset0: [Dataset0]
+  Distribution: [Distribution]
+  MavenBuild: [MavenBuild]
+  Dataset1: [Dataset1]
+  untyped: [untyped]
+  Location: [Location]
+  Distribution0: [Distribution0]
+}
