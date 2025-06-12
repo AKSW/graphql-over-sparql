@@ -1,0 +1,17 @@
+query @pretty @debug {
+  Catalog {
+    title 
+    dataset(limit: 10, keyword: "schul")
+      # @filter(by: "exists { ?s <http://purl.org/dc/terms/description> ?o filter(contains(lcase(str(?o)), lcase(?keyword))) }", this: "s")
+    {
+      # spo @pattern(of: "?s ?p ?o", from: "s", to: "o") @index(by: "?p", oneIf: "true")
+      title
+      description
+      distribution {
+        downloadURL @skipIfNull
+        accessURL @skipIfNull
+      }
+    }
+  }
+}
+
