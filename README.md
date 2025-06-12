@@ -10,7 +10,7 @@ The source code is currently part of our [JenaX](https://github.com/Scaseco/jena
 
 The GraphQL module comprises the engine, a simple user interface and a plugin for the Jena Fuseki server.
 
-Link: https://github.com/Scaseco/jenax/tree/develop/jenax-graphql-parent/jenax-graphql-v2
+Link: https://github.com/Scaseco/jenax/tree/develop/jenax-graphql-parent/jenax-graphql-v2-parent
 
 ## Demos
 
