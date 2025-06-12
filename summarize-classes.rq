@@ -1,0 +1,15 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+CONSTRUCT {
+  ?s ?p ?o
+}
+{
+  # Get all types
+  ?t a owl:Class .
+
+  # For each type: Fetch n=10 instances and all their properties.
+  LATERAL {
+    { SELECT DISTINCT ?t ?s { ?s a ?t } LIMIT 10 }
+    ?s ?p ?o
+  }
+}
+
