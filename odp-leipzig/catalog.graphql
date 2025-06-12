@@ -1,0 +1,123 @@
+type Dataset @uri(value: "http://www.w3.org/ns/dcat#Dataset") {
+  uri: Scalar @to
+  keyword: [Scalar] @uri(value: "http://www.w3.org/ns/dcat#keyword")
+  language: Untyped @uri(value: "http://purl.org/dc/terms/language")
+  accrualPeriodicity: Untyped @uri(value: "http://purl.org/dc/terms/accrualPeriodicity")
+  applicableLegislation: Untyped @uri(value: "http://data.europa.eu/r5r/applicableLegislation")
+  publisher: Organization @uri(value: "http://purl.org/dc/terms/publisher")
+  identifier: Untyped @uri(value: "http://purl.org/dc/terms/identifier")
+  politicalGeocodingLevelURI: Untyped @uri(value: "http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI")
+  relation: [Dataset] @uri(value: "http://purl.org/dc/terms/relation")
+  distribution: [Distribution] @uri(value: "http://www.w3.org/ns/dcat#distribution")
+  creator: Organization @uri(value: "http://purl.org/dc/terms/creator")
+  type: Scalar @uri(value: "http://purl.org/dc/terms/type")
+  issued: Scalar @uri(value: "http://purl.org/dc/terms/issued")
+  title: Scalar @uri(value: "http://purl.org/dc/terms/title")
+  maintainer: Organization @uri(value: "http://dcat-ap.de/def/dcatde/maintainer")
+  theme: [Untyped] @uri(value: "http://www.w3.org/ns/dcat#theme")
+  identifier0: Scalar @uri(value: "http://www.w3.org/ns/adms#identifier")
+  versionInfo: Scalar @uri(value: "http://www.w3.org/2002/07/owl#versionInfo")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  hvdCategory: Untyped @uri(value: "http://data.europa.eu/r5r/hvdCategory")
+  politicalGeocodingURI: Untyped @uri(value: "http://dcat-ap.de/def/dcatde/politicalGeocodingURI")
+  description: Scalar @uri(value: "http://purl.org/dc/terms/description")
+  spatial: [Location] @uri(value: "http://purl.org/dc/terms/spatial")
+  contactPoint: Organization0 @uri(value: "http://www.w3.org/ns/dcat#contactPoint")
+  modified: Scalar @uri(value: "http://purl.org/dc/terms/modified")
+  landingPage: Untyped @uri(value: "http://www.w3.org/ns/dcat#landingPage")
+  temporal: [PeriodOfTime] @uri(value: "http://purl.org/dc/terms/temporal")
+}
+
+type Distribution @uri(value: "http://www.w3.org/ns/dcat#Distribution") {
+  uri: Scalar @to
+  page: [Untyped] @uri(value: "http://xmlns.com/foaf/0.1/page")
+  byteSize: Scalar @uri(value: "http://www.w3.org/ns/dcat#byteSize")
+  applicableLegislation: Untyped @uri(value: "http://data.europa.eu/r5r/applicableLegislation")
+  downloadURL: Untyped @uri(value: "http://www.w3.org/ns/dcat#downloadURL")
+  description: Scalar @uri(value: "http://purl.org/dc/terms/description")
+  licenseAttributionByText: Scalar @uri(value: "http://dcat-ap.de/def/dcatde/licenseAttributionByText")
+  checksum: Checksum @uri(value: "http://spdx.org/rdf/terms#checksum")
+  format: Untyped @uri(value: "http://purl.org/dc/terms/format")
+  modified: [Scalar] @uri(value: "http://purl.org/dc/terms/modified")
+  issued: [Scalar] @uri(value: "http://purl.org/dc/terms/issued")
+  title: Scalar @uri(value: "http://purl.org/dc/terms/title")
+  accessURL: Untyped @uri(value: "http://www.w3.org/ns/dcat#accessURL")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  mediaType: [Untyped] @uri(value: "http://www.w3.org/ns/dcat#mediaType")
+  license: Untyped @uri(value: "http://purl.org/dc/terms/license")
+}
+
+type Organization @uri(value: "http://xmlns.com/foaf/0.1/Organization") {
+  uri: Scalar @to
+  mbox: Scalar @uri(value: "http://xmlns.com/foaf/0.1/mbox")
+  name: Scalar @uri(value: "http://xmlns.com/foaf/0.1/name")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type Catalog @uri(value: "http://www.w3.org/ns/dcat#Catalog") {
+  uri: Scalar @to
+  homepage: Catalog @uri(value: "http://xmlns.com/foaf/0.1/homepage")
+  language: Scalar @uri(value: "http://purl.org/dc/terms/language")
+  modified: Scalar @uri(value: "http://purl.org/dc/terms/modified")
+  title: Scalar @uri(value: "http://purl.org/dc/terms/title")
+  description: Scalar @uri(value: "http://purl.org/dc/terms/description")
+  dataset: [Dataset] @uri(value: "http://www.w3.org/ns/dcat#dataset")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type Checksum @uri(value: "http://spdx.org/rdf/terms#Checksum") {
+  uri: Scalar @to
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+  checksumValue: Scalar @uri(value: "http://spdx.org/rdf/terms#checksumValue")
+}
+
+type Location @uri(value: "http://purl.org/dc/terms/Location") {
+  uri: Scalar @to
+  adminUnitL2: Untyped @uri(value: "http://www.w3.org/ns/locn#adminUnitL2")
+  geometry: [Scalar] @uri(value: "http://www.w3.org/ns/locn#geometry")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type Organization0 @uri(value: "http://www.w3.org/2006/vcard/ns#Organization") {
+  uri: Scalar @to
+  fn: Scalar @uri(value: "http://www.w3.org/2006/vcard/ns#fn")
+  hasEmail: Untyped @uri(value: "http://www.w3.org/2006/vcard/ns#hasEmail")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type PeriodOfTime @uri(value: "http://purl.org/dc/terms/PeriodOfTime") {
+  uri: Scalar @to
+  startDate: Scalar @uri(value: "http://schema.org/startDate")
+  endDate: Scalar @uri(value: "http://schema.org/endDate")
+  endDate0: Scalar @uri(value: "http://www.w3.org/ns/dcat#endDate")
+  startDate0: Scalar @uri(value: "http://www.w3.org/ns/dcat#startDate")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type PagedCollection @uri(value: "http://www.w3.org/ns/hydra/core#PagedCollection") {
+  uri: Scalar @to
+  first: Scalar @uri(value: "http://www.w3.org/ns/hydra/core#first")
+  last: Scalar @uri(value: "http://www.w3.org/ns/hydra/core#last")
+  lastPage: Scalar @uri(value: "http://www.w3.org/ns/hydra/core#lastPage")
+  totalItems: Scalar @uri(value: "http://www.w3.org/ns/hydra/core#totalItems")
+  firstPage: Scalar @uri(value: "http://www.w3.org/ns/hydra/core#firstPage")
+  itemsPerPage: Scalar @uri(value: "http://www.w3.org/ns/hydra/core#itemsPerPage")
+  type0: Untyped @uri(value: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+}
+
+type Untyped {
+  uri: Scalar @to
+}
+
+type Query {
+  Dataset: [Dataset]
+  Distribution: [Distribution]
+  Organization: [Organization]
+  Catalog: [Catalog]
+  Checksum: [Checksum]
+  Location: [Location]
+  Organization0: [Organization0]
+  PeriodOfTime: [PeriodOfTime]
+  PagedCollection: [PagedCollection]
+  Untyped: [Untyped]
+}
