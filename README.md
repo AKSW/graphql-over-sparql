@@ -1,6 +1,7 @@
 # graphql-over-sparql
 Landing page for the GraphQL over SPARQL project.
 
+The screenshot below shows our GraphQL integration in [Apache Jena's Fueski server](https://jena.apache.org/documentation/fuseki2/).
 ![GraphQL plugin in Apache Jena Fuseki Server.](images/2025-06-12-fuseki-plugin-screenshot.png "GraphQL plugin in Apache Jena Fuseki Server.")
 
 ## Source Code
